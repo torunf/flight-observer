@@ -1,0 +1,885 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		090E81F375E82276115D2944 /* Pods_FlightObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C8C79F37728CE2DDBD0DCF /* Pods_FlightObserver.framework */; };
+		67B6BE2D27397092004C5EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE2C27397092004C5EA6 /* AppDelegate.swift */; };
+		67B6BE3627397094004C5EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE3527397094004C5EA6 /* Assets.xcassets */; };
+		67B6BE3927397094004C5EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE3727397094004C5EA6 /* LaunchScreen.storyboard */; };
+		67B6BE4427397094004C5EA6 /* FlightObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE4327397094004C5EA6 /* FlightObserverTests.swift */; };
+		67B6BE4E27397094004C5EA6 /* FlightObserverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE4D27397094004C5EA6 /* FlightObserverUITests.swift */; };
+		67B6BE5027397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */; };
+		67B6BE6227397498004C5EA6 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6127397498004C5EA6 /* AppRouter.swift */; };
+		67B6BE64273974A9004C5EA6 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE63273974A9004C5EA6 /* AppContainer.swift */; };
+		67B6BE6827397E17004C5EA6 /* LaunchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE6727397E17004C5EA6 /* LaunchList.storyboard */; };
+		67B6BE6A27397E30004C5EA6 /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6927397E30004C5EA6 /* LaunchListViewController.swift */; };
+		67B6BE6C27397EC1004C5EA6 /* LaunchListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6B27397EC1004C5EA6 /* LaunchListBuilder.swift */; };
+		67B6BE6E27397F0D004C5EA6 /* LaunchListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6D27397F0D004C5EA6 /* LaunchListContracts.swift */; };
+		67B6BE7027397F79004C5EA6 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6F27397F79004C5EA6 /* LaunchListViewModel.swift */; };
+		67B6BE73273980EB004C5EA6 /* LaunchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE72273980EB004C5EA6 /* LaunchDetail.swift */; };
+		67B6BE752739828C004C5EA6 /* LaunchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE742739828C004C5EA6 /* LaunchApi.swift */; };
+		67B6BE7727398301004C5EA6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7627398301004C5EA6 /* Result.swift */; };
+		67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */; };
+		67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */; };
+		B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */; };
+		DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67B6BE4027397094004C5EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B6BE2127397092004C5EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67B6BE2827397092004C5EA6;
+			remoteInfo = FlightObserver;
+		};
+		67B6BE4A27397094004C5EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B6BE2127397092004C5EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67B6BE2827397092004C5EA6;
+			remoteInfo = FlightObserver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22476715D53622257F95ED73 /* Pods-FlightObserver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver.release.xcconfig"; path = "Target Support Files/Pods-FlightObserver/Pods-FlightObserver.release.xcconfig"; sourceTree = "<group>"; };
+		3DEEEE32B8E184A5EE5811E3 /* Pods-FlightObserver-FlightObserverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver-FlightObserverUITests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		432F068C8EF990EF570F612D /* Pods-FlightObserver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserver/Pods-FlightObserver.debug.xcconfig"; sourceTree = "<group>"; };
+		5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6BE2927397092004C5EA6 /* FlightObserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightObserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6BE2C27397092004C5EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67B6BE3527397094004C5EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67B6BE3827397094004C5EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67B6BE3A27397094004C5EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67B6BE3F27397094004C5EA6 /* FlightObserverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightObserverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6BE4327397094004C5EA6 /* FlightObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightObserverTests.swift; sourceTree = "<group>"; };
+		67B6BE4927397094004C5EA6 /* FlightObserverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightObserverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6BE4D27397094004C5EA6 /* FlightObserverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightObserverUITests.swift; sourceTree = "<group>"; };
+		67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightObserverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		67B6BE6127397498004C5EA6 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		67B6BE63273974A9004C5EA6 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		67B6BE6727397E17004C5EA6 /* LaunchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchList.storyboard; sourceTree = "<group>"; };
+		67B6BE6927397E30004C5EA6 /* LaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
+		67B6BE6B27397EC1004C5EA6 /* LaunchListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListBuilder.swift; sourceTree = "<group>"; };
+		67B6BE6D27397F0D004C5EA6 /* LaunchListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListContracts.swift; sourceTree = "<group>"; };
+		67B6BE6F27397F79004C5EA6 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
+		67B6BE72273980EB004C5EA6 /* LaunchDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetail.swift; sourceTree = "<group>"; };
+		67B6BE742739828C004C5EA6 /* LaunchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchApi.swift; sourceTree = "<group>"; };
+		67B6BE7627398301004C5EA6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailLinks.swift; sourceTree = "<group>"; };
+		67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailRow.swift; sourceTree = "<group>"; };
+		9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver_FlightObserverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.release.xcconfig"; sourceTree = "<group>"; };
+		ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2A180A9C4162CD8AC417322 /* Pods-FlightObserver-FlightObserverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver-FlightObserverUITests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2C8C79F37728CE2DDBD0DCF /* Pods_FlightObserver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67B6BE2627397092004C5EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090E81F375E82276115D2944 /* Pods_FlightObserver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B6BE3C27397094004C5EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B6BE4627397094004C5EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3691B9DABF10F2535E11DA21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C8C79F37728CE2DDBD0DCF /* Pods_FlightObserver.framework */,
+				9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */,
+				5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67B6BE2027397092004C5EA6 = {
+			isa = PBXGroup;
+			children = (
+				67B6BE2B27397092004C5EA6 /* FlightObserver */,
+				67B6BE4227397094004C5EA6 /* FlightObserverTests */,
+				67B6BE4C27397094004C5EA6 /* FlightObserverUITests */,
+				67B6BE2A27397092004C5EA6 /* Products */,
+				759661529CC22FB94E48F739 /* Pods */,
+				3691B9DABF10F2535E11DA21 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		67B6BE2A27397092004C5EA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE2927397092004C5EA6 /* FlightObserver.app */,
+				67B6BE3F27397094004C5EA6 /* FlightObserverTests.xctest */,
+				67B6BE4927397094004C5EA6 /* FlightObserverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B6BE2B27397092004C5EA6 /* FlightObserver */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE6027397437004C5EA6 /* Support */,
+				67B6BE5C273973C5004C5EA6 /* Api */,
+				67B6BE5D273973CC004C5EA6 /* App */,
+				67B6BE5E273973D9004C5EA6 /* Scenes */,
+				67B6BE5F273973F9004C5EA6 /* Resources */,
+			);
+			path = FlightObserver;
+			sourceTree = "<group>";
+		};
+		67B6BE4227397094004C5EA6 /* FlightObserverTests */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE4327397094004C5EA6 /* FlightObserverTests.swift */,
+			);
+			path = FlightObserverTests;
+			sourceTree = "<group>";
+		};
+		67B6BE4C27397094004C5EA6 /* FlightObserverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE4D27397094004C5EA6 /* FlightObserverUITests.swift */,
+				67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */,
+			);
+			path = FlightObserverUITests;
+			sourceTree = "<group>";
+		};
+		67B6BE5C273973C5004C5EA6 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE71273980A8004C5EA6 /* Models */,
+				67B6BE742739828C004C5EA6 /* LaunchApi.swift */,
+				67B6BE7627398301004C5EA6 /* Result.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		67B6BE5D273973CC004C5EA6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE2C27397092004C5EA6 /* AppDelegate.swift */,
+				67B6BE6127397498004C5EA6 /* AppRouter.swift */,
+				67B6BE63273974A9004C5EA6 /* AppContainer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		67B6BE5E273973D9004C5EA6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE6527397DAE004C5EA6 /* LaunchList */,
+				67B6BE6627397DD4004C5EA6 /* LaunchDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		67B6BE5F273973F9004C5EA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE3527397094004C5EA6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		67B6BE6027397437004C5EA6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE7A2739AA79004C5EA6 /* CustomRows */,
+				67B6BE3A27397094004C5EA6 /* Info.plist */,
+				67B6BE3727397094004C5EA6 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		67B6BE6527397DAE004C5EA6 /* LaunchList */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE6727397E17004C5EA6 /* LaunchList.storyboard */,
+				67B6BE6927397E30004C5EA6 /* LaunchListViewController.swift */,
+				67B6BE6B27397EC1004C5EA6 /* LaunchListBuilder.swift */,
+				67B6BE6D27397F0D004C5EA6 /* LaunchListContracts.swift */,
+				67B6BE6F27397F79004C5EA6 /* LaunchListViewModel.swift */,
+			);
+			path = LaunchList;
+			sourceTree = "<group>";
+		};
+		67B6BE6627397DD4004C5EA6 /* LaunchDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LaunchDetail;
+			sourceTree = "<group>";
+		};
+		67B6BE71273980A8004C5EA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE72273980EB004C5EA6 /* LaunchDetail.swift */,
+				67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67B6BE7A2739AA79004C5EA6 /* CustomRows */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */,
+			);
+			path = CustomRows;
+			sourceTree = "<group>";
+		};
+		759661529CC22FB94E48F739 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				432F068C8EF990EF570F612D /* Pods-FlightObserver.debug.xcconfig */,
+				22476715D53622257F95ED73 /* Pods-FlightObserver.release.xcconfig */,
+				B2A180A9C4162CD8AC417322 /* Pods-FlightObserver-FlightObserverUITests.debug.xcconfig */,
+				3DEEEE32B8E184A5EE5811E3 /* Pods-FlightObserver-FlightObserverUITests.release.xcconfig */,
+				ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */,
+				AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67B6BE2827397092004C5EA6 /* FlightObserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B6BE5327397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserver" */;
+			buildPhases = (
+				53CF86E91269689D067EE91F /* [CP] Check Pods Manifest.lock */,
+				67B6BE2527397092004C5EA6 /* Sources */,
+				67B6BE2627397092004C5EA6 /* Frameworks */,
+				67B6BE2727397092004C5EA6 /* Resources */,
+				97E998772F2F65651FE3700A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightObserver;
+			productName = FlightObserver;
+			productReference = 67B6BE2927397092004C5EA6 /* FlightObserver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67B6BE3E27397094004C5EA6 /* FlightObserverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B6BE5627397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverTests" */;
+			buildPhases = (
+				0A232DEBDA591D234213DD30 /* [CP] Check Pods Manifest.lock */,
+				67B6BE3B27397094004C5EA6 /* Sources */,
+				67B6BE3C27397094004C5EA6 /* Frameworks */,
+				67B6BE3D27397094004C5EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67B6BE4127397094004C5EA6 /* PBXTargetDependency */,
+			);
+			name = FlightObserverTests;
+			productName = FlightObserverTests;
+			productReference = 67B6BE3F27397094004C5EA6 /* FlightObserverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67B6BE4827397094004C5EA6 /* FlightObserverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B6BE5927397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverUITests" */;
+			buildPhases = (
+				F116419C0D3DC9CA06A44443 /* [CP] Check Pods Manifest.lock */,
+				67B6BE4527397094004C5EA6 /* Sources */,
+				67B6BE4627397094004C5EA6 /* Frameworks */,
+				67B6BE4727397094004C5EA6 /* Resources */,
+				D91783E7C5E3ECFA3D1B2FFC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67B6BE4B27397094004C5EA6 /* PBXTargetDependency */,
+			);
+			name = FlightObserverUITests;
+			productName = FlightObserverUITests;
+			productReference = 67B6BE4927397094004C5EA6 /* FlightObserverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67B6BE2127397092004C5EA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					67B6BE2827397092004C5EA6 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					67B6BE3E27397094004C5EA6 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 67B6BE2827397092004C5EA6;
+					};
+					67B6BE4827397094004C5EA6 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 67B6BE2827397092004C5EA6;
+					};
+				};
+			};
+			buildConfigurationList = 67B6BE2427397092004C5EA6 /* Build configuration list for PBXProject "FlightObserver" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67B6BE2027397092004C5EA6;
+			productRefGroup = 67B6BE2A27397092004C5EA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67B6BE2827397092004C5EA6 /* FlightObserver */,
+				67B6BE3E27397094004C5EA6 /* FlightObserverTests */,
+				67B6BE4827397094004C5EA6 /* FlightObserverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67B6BE2727397092004C5EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B6BE3927397094004C5EA6 /* LaunchScreen.storyboard in Resources */,
+				67B6BE6827397E17004C5EA6 /* LaunchList.storyboard in Resources */,
+				67B6BE3627397094004C5EA6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B6BE3D27397094004C5EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B6BE4727397094004C5EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A232DEBDA591D234213DD30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlightObserverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53CF86E91269689D067EE91F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlightObserver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97E998772F2F65651FE3700A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlightObserver/Pods-FlightObserver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlightObserver/Pods-FlightObserver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlightObserver/Pods-FlightObserver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D91783E7C5E3ECFA3D1B2FFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F116419C0D3DC9CA06A44443 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlightObserver-FlightObserverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67B6BE2527397092004C5EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B6BE2D27397092004C5EA6 /* AppDelegate.swift in Sources */,
+				67B6BE64273974A9004C5EA6 /* AppContainer.swift in Sources */,
+				67B6BE7027397F79004C5EA6 /* LaunchListViewModel.swift in Sources */,
+				67B6BE73273980EB004C5EA6 /* LaunchDetail.swift in Sources */,
+				67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */,
+				67B6BE752739828C004C5EA6 /* LaunchApi.swift in Sources */,
+				67B6BE6227397498004C5EA6 /* AppRouter.swift in Sources */,
+				67B6BE7727398301004C5EA6 /* Result.swift in Sources */,
+				67B6BE6A27397E30004C5EA6 /* LaunchListViewController.swift in Sources */,
+				67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */,
+				67B6BE6C27397EC1004C5EA6 /* LaunchListBuilder.swift in Sources */,
+				67B6BE6E27397F0D004C5EA6 /* LaunchListContracts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B6BE3B27397094004C5EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B6BE4427397094004C5EA6 /* FlightObserverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B6BE4527397094004C5EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B6BE5027397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift in Sources */,
+				67B6BE4E27397094004C5EA6 /* FlightObserverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67B6BE4127397094004C5EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67B6BE2827397092004C5EA6 /* FlightObserver */;
+			targetProxy = 67B6BE4027397094004C5EA6 /* PBXContainerItemProxy */;
+		};
+		67B6BE4B27397094004C5EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67B6BE2827397092004C5EA6 /* FlightObserver */;
+			targetProxy = 67B6BE4A27397094004C5EA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67B6BE3727397094004C5EA6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67B6BE3827397094004C5EA6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67B6BE5127397094004C5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67B6BE5227397094004C5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67B6BE5427397094004C5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432F068C8EF990EF570F612D /* Pods-FlightObserver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPYF7YJ28K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightObserver/Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Flight Observer";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67B6BE5527397094004C5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22476715D53622257F95ED73 /* Pods-FlightObserver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPYF7YJ28K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightObserver/Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Flight Observer";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67B6BE5727397094004C5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPYF7YJ28K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightObserver.app/FlightObserver";
+			};
+			name = Debug;
+		};
+		67B6BE5827397094004C5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPYF7YJ28K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightObserver.app/FlightObserver";
+			};
+			name = Release;
+		};
+		67B6BE5A27397094004C5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2A180A9C4162CD8AC417322 /* Pods-FlightObserver-FlightObserverUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPYF7YJ28K;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlightObserver;
+			};
+			name = Debug;
+		};
+		67B6BE5B27397094004C5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DEEEE32B8E184A5EE5811E3 /* Pods-FlightObserver-FlightObserverUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPYF7YJ28K;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlightObserver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67B6BE2427397092004C5EA6 /* Build configuration list for PBXProject "FlightObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B6BE5127397094004C5EA6 /* Debug */,
+				67B6BE5227397094004C5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B6BE5327397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B6BE5427397094004C5EA6 /* Debug */,
+				67B6BE5527397094004C5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B6BE5627397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B6BE5727397094004C5EA6 /* Debug */,
+				67B6BE5827397094004C5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B6BE5927397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B6BE5A27397094004C5EA6 /* Debug */,
+				67B6BE5B27397094004C5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67B6BE2127397092004C5EA6 /* Project object */;
+}
