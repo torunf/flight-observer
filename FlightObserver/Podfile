@@ -9,7 +9,7 @@ target 'FlightObserver' do
 
   pod 'Kingfisher', '~> 7.0'
   pod 'Alamofire', '~> 5.4'
-
+  pod 'ImageSlideshow', '~> 1.9.0'
 
   target 'FlightObserverTests' do
     inherit! :search_paths

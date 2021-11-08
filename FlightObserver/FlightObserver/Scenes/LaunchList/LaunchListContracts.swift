@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ImageSlideshow
 
 protocol LaunchListViewModelProtocol {
     var delegate: LaunchListViewModelDelegate? { get set }
@@ -15,9 +16,13 @@ protocol LaunchListViewModelProtocol {
 }
 
 enum LaunchListViewModelOutput: Equatable {
+    static func == (lhs: LaunchListViewModelOutput, rhs: LaunchListViewModelOutput) -> Bool {
+        return true
+    }
+    
     case updateTitle(String)
     case setLoading(Bool)
-    case showSliders(Bool)
+    case showSliders([InputSource])
     case showLaunchList(Bool)
 }
 

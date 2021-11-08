@@ -15,19 +15,23 @@ public protocol LaunchApiServiceProtocol {
 
 class LaunchApiService : LaunchApiServiceProtocol {
     
+    let baseUrlString: String
+
     public enum Error: Swift.Error {
         case parameterParsingError(internal: Swift.Error)
         case serializationError(internal: Swift.Error)
         case networkError(internal: Swift.Error)
     }
     
-    public init() {}
+    public init() {
+        baseUrlString = "https://api.spacexdata.com/v3/"
+    }
+    
+    
     func fetchUpcomingLaunchs( completion: @escaping (Result<[LaunchDetail]>) -> Void) {
-        let urlString = "https://api.spacexdata.com/v3/launches/upcoming"
+        let urlString = baseUrlString + "launches/upcoming"
         var request = URLRequest(url: URL(string:urlString)!)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-                
         AF.request(request).responseData { response in
             switch response.result {
             case .success(let data):
@@ -46,11 +50,9 @@ class LaunchApiService : LaunchApiServiceProtocol {
     }
     
     func fetchAllLaunchs( completion: @escaping (Result<[LaunchDetail]>) -> Void) {
-        let urlString = "https://api.spacexdata.com/v3/launches"
+        let urlString = baseUrlString + "launches"
         var request = URLRequest(url: URL(string:urlString)!)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-                
+        request.httpMethod = HTTPMethod.get.rawValue
         AF.request(request).responseData { response in
             switch response.result {
             case .success(let data):

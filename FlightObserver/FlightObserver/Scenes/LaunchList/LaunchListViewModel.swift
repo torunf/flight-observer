@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 import Kingfisher
+import ImageSlideshow
 
 final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
-    
     
     weak var delegate: LaunchListViewModelDelegate?
     private let service: LaunchApiServiceProtocol
@@ -35,7 +35,8 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
             switch result {
             case .success(let response):
                 self?.upcomingLaunchs = response
-                self?.notify(.showSliders(true))
+                let x:[InputSource] = response.map { KingfisherSource(urlString: $0.links.mission_patch ?? "https://pic.onlinewebfonts.com/svg/img_546302.png" )! }
+                self?.notify(.showSliders(x))
             case .failure(let error):
                 print(error)
             }
