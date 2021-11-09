@@ -13,6 +13,7 @@ protocol LaunchListViewModelProtocol {
     func load()
     func getSlider()
     func getList()
+    func getLaunch(withIndex ix: Int ) -> LaunchDetail
 }
 
 enum LaunchListViewModelOutput: Equatable {
@@ -27,9 +28,11 @@ enum LaunchListViewModelOutput: Equatable {
 }
 
 enum LaunchListViewRoute {
-//    case detail(LaunchDetailViewModelProtocol)
+    case detail(LaunchDetailViewModelProtocol)
 }
 
 protocol LaunchListViewModelDelegate: AnyObject {
     func handleViewModelOutput(_ output: LaunchListViewModelOutput)
+    func navigate(to route: LaunchListViewRoute)
+
 }

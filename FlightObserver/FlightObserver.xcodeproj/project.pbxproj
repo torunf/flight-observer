@@ -27,6 +27,11 @@
 		67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */; };
 		67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */; };
 		67B6BE7E2739C4F9004C5EA6 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7D2739C4F9004C5EA6 /* KingfisherSource.swift */; };
+		67B6BE81273AF351004C5EA6 /* LaunchDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE80273AF351004C5EA6 /* LaunchDetail.storyboard */; };
+		67B6BE83273AF372004C5EA6 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE82273AF372004C5EA6 /* LaunchDetailViewController.swift */; };
+		67B6BE85273AF380004C5EA6 /* LaunchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE84273AF380004C5EA6 /* LaunchDetailBuilder.swift */; };
+		67B6BE87273AF39C004C5EA6 /* LaunchDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE86273AF39C004C5EA6 /* LaunchDetailContracts.swift */; };
+		67B6BE89273AF3AC004C5EA6 /* LaunchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE88273AF3AC004C5EA6 /* LaunchDetailViewModel.swift */; };
 		B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */; };
 		DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +81,11 @@
 		67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailLinks.swift; sourceTree = "<group>"; };
 		67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailRow.swift; sourceTree = "<group>"; };
 		67B6BE7D2739C4F9004C5EA6 /* KingfisherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
+		67B6BE80273AF351004C5EA6 /* LaunchDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchDetail.storyboard; sourceTree = "<group>"; };
+		67B6BE82273AF372004C5EA6 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
+		67B6BE84273AF380004C5EA6 /* LaunchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailBuilder.swift; sourceTree = "<group>"; };
+		67B6BE86273AF39C004C5EA6 /* LaunchDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailContracts.swift; sourceTree = "<group>"; };
+		67B6BE88273AF3AC004C5EA6 /* LaunchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewModel.swift; sourceTree = "<group>"; };
 		9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver_FlightObserverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +245,11 @@
 		67B6BE6627397DD4004C5EA6 /* LaunchDetail */ = {
 			isa = PBXGroup;
 			children = (
+				67B6BE80273AF351004C5EA6 /* LaunchDetail.storyboard */,
+				67B6BE82273AF372004C5EA6 /* LaunchDetailViewController.swift */,
+				67B6BE84273AF380004C5EA6 /* LaunchDetailBuilder.swift */,
+				67B6BE86273AF39C004C5EA6 /* LaunchDetailContracts.swift */,
+				67B6BE88273AF3AC004C5EA6 /* LaunchDetailViewModel.swift */,
 			);
 			path = LaunchDetail;
 			sourceTree = "<group>";
@@ -386,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6BE81273AF351004C5EA6 /* LaunchDetail.storyboard in Resources */,
 				67B6BE3927397094004C5EA6 /* LaunchScreen.storyboard in Resources */,
 				67B6BE6827397E17004C5EA6 /* LaunchList.storyboard in Resources */,
 				67B6BE3627397094004C5EA6 /* Assets.xcassets in Resources */,
@@ -521,11 +537,15 @@
 				67B6BE7027397F79004C5EA6 /* LaunchListViewModel.swift in Sources */,
 				67B6BE73273980EB004C5EA6 /* LaunchDetail.swift in Sources */,
 				67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */,
+				67B6BE87273AF39C004C5EA6 /* LaunchDetailContracts.swift in Sources */,
 				67B6BE752739828C004C5EA6 /* LaunchApi.swift in Sources */,
+				67B6BE85273AF380004C5EA6 /* LaunchDetailBuilder.swift in Sources */,
+				67B6BE89273AF3AC004C5EA6 /* LaunchDetailViewModel.swift in Sources */,
 				67B6BE6227397498004C5EA6 /* AppRouter.swift in Sources */,
 				67B6BE7727398301004C5EA6 /* Result.swift in Sources */,
 				67B6BE7E2739C4F9004C5EA6 /* KingfisherSource.swift in Sources */,
 				67B6BE6A27397E30004C5EA6 /* LaunchListViewController.swift in Sources */,
+				67B6BE83273AF372004C5EA6 /* LaunchDetailViewController.swift in Sources */,
 				67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */,
 				67B6BE6C27397EC1004C5EA6 /* LaunchListBuilder.swift in Sources */,
 				67B6BE6E27397F0D004C5EA6 /* LaunchListContracts.swift in Sources */,

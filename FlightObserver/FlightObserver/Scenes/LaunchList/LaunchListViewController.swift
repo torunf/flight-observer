@@ -12,7 +12,8 @@ import ImageSlideshow
 
 final class LaunchListViewController: UIViewController {
     var viewModel: LaunchListViewModelProtocol!
-    
+    var loading : UIView?
+
     @IBOutlet weak var tableView: UITableView?
     
     @IBOutlet weak var slideshow: ImageSlideshow!
@@ -26,6 +27,27 @@ final class LaunchListViewController: UIViewController {
         tableView?.estimatedRowHeight = 100
     }
     
+    public func showSpinner(isLoading: Bool) {
+        if(!isLoading) {
+            removeSpinner()
+            return
+        }
+        let ai = UIActivityIndicatorView.init(style: .large)
+        ai.startAnimating()
+        ai.center = view.center
+             
+        DispatchQueue.main.async {
+            self.view.addSubview(ai)
+        }
+        loading = ai
+    }
+    
+    public func removeSpinner() {
+        DispatchQueue.main.async {
+            self.loading?.removeFromSuperview()
+            self.loading = nil
+        }
+    }
 }
 
 
@@ -38,21 +60,31 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
             self.title = title
             break
         case .setLoading(let isLoading):
-            UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+            showSpinner(isLoading: isLoading)
             break
         case .showSliders(let slides):
-            
-            
-            
-//            let x:[InputSource] = [KingfisherSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!]
-            
             slideshow.setImageInputs(slides)
-            
-            
             break
         case .showLaunchList(_):
             self.tableView?.reloadData()
             break
         }
-    }    
+    }
+    
+    func navigate(to route: LaunchListViewRoute) {
+        switch route {
+        case .detail(let viewModel):
+            let viewController = LaunchDetailBuilder.make(with: viewModel)
+            show(viewController, sender: nil)
+        }
+    }
+}
+
+extension LaunchListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.viewModel.getLaunch(withIndex: indexPath.row)
+        let viewModel = LaunchDetailViewModel(launchDetail: item)
+        self.viewModel!.delegate!.navigate(to: .detail(viewModel))        
+    }
+
 }

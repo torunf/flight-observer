@@ -50,10 +50,16 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
             case .success(let response):
                 self?.allLaunchs = response
                 self?.notify(.showLaunchList(true))
+                self?.notify(.setLoading(false))
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func getLaunch(withIndex ix: Int ) -> LaunchDetail {
+        let item = allLaunchs![ix]
+        return item
     }
     
     private func notify(_ output: LaunchListViewModelOutput) {
@@ -75,26 +81,21 @@ extension LaunchListViewModel: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         if let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? FlightDetailRow {
-            
-            print(indexPath.row)
-            print(indexPath.section)
-
             let item = allLaunchs![indexPath.row]
-            cell.lblFlightHeader?.text = item.mission_name
+            cell.lblFlightHeader?.text = item.missionName
             cell.lblFlightDate?.text = item.launchDateFormatted
             if item.links.mission_patch_small != nil {
                 let url = URL(string: item.links.mission_patch_small!)
                 cell.imgFlight!.kf.setImage(with: url)
             }
-            if item.details != nil {
-                cell.lblFlightDetail?.text = item.details
+            else {
+                cell.imgFlight!.image = nil
             }
+            cell.lblFlightDetail?.text = item.details ?? ""
             
             return cell
         }
-        
         return UITableViewCell()
     }
     
@@ -103,3 +104,16 @@ extension LaunchListViewModel: UITableViewDataSource {
     }
     
 }
+
+
+//extension LaunchListViewModel: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let item = allLaunchs![indexPath.row]
+//
+//        let viewModel = LaunchDetailViewModel(launchDetail: item)
+//        self.delegate?.navigate(to: .detail(viewModel))
+//    }
+//
+//}
+
