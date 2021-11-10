@@ -128,7 +128,15 @@ extension LaunchDetailViewController: LaunchDetailViewModelDelegate {
         lblLaunchDate.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 5).isActive = true
         lblLaunchDate.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20.0).isActive = true
 
-        let url = URL(string: presentation.links.mission_patch!)
+        let url: URL?
+        if presentation.links.mission_patch != nil {
+            url = URL(string: presentation.links.mission_patch!)
+        }
+        else {
+            url = URL(string: "https://pic.onlinewebfonts.com/svg/img_546302.png")
+        }
+        
+        imgMissionPatch.kf.indicatorType = .activity
         imgMissionPatch.kf.setImage(with: url)
         lblMissionName.text = presentation.missionName
         lblDetail.text = presentation.details

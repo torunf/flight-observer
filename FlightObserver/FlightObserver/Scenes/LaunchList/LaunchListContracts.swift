@@ -10,6 +10,7 @@ import ImageSlideshow
 
 protocol LaunchListViewModelProtocol {
     var delegate: LaunchListViewModelDelegate? { get set }
+    var fetchingMore: Bool { get set }
     func load()
     func getSlider()
     func getList()

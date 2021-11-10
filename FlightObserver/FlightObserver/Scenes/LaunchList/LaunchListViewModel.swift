@@ -15,9 +15,19 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     
     weak var delegate: LaunchListViewModelDelegate?
     private let service: LaunchApiServiceProtocol
-    private var upcomingLaunchs: [LaunchDetail]? = nil
-    private var allLaunchs: [LaunchDetail]? = nil
-
+    private var upcomingLaunchs: [LaunchDetail]? = []
+    private var allLaunchs: [LaunchDetail]? = []
+    private var launchsTotalCount: Int = 0
+    private var page = 1
+    private var perPage = 8
+    var fetchingMore: Bool = true
+    var totalPage: Int {
+        if launchsTotalCount == 0 {
+            return 0
+        }
+        return (launchsTotalCount / perPage) + 1
+    }
+    
     init(service: LaunchApiServiceProtocol) {
         self.service = service
     }
@@ -33,7 +43,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
         service.fetchUpcomingLaunchs() { [weak self](result) in
             guard self != nil else { return }
             switch result {
-            case .success(let response):
+            case .success(let response, _):
                 self?.upcomingLaunchs = response
                 let x:[InputSource] = response.map { KingfisherSource(urlString: $0.links.mission_patch ?? "https://pic.onlinewebfonts.com/svg/img_546302.png" )! }
                 self?.notify(.showSliders(x))
@@ -44,11 +54,22 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     }
     
     func getList() {
-        service.fetchAllLaunchs() { [weak self](result) in
+        self.fetchingMore = false
+
+        service.fetchAllLaunchs(page: self.page, perPage: self.perPage) { [weak self](result) in
             guard self != nil else { return }
             switch result {
-            case .success(let response):
-                self?.allLaunchs = response
+            case .success(let response, let count):
+                self?.allLaunchs?.append(contentsOf: response)
+                self?.launchsTotalCount = count
+                
+                
+                if self!.page < self!.totalPage {
+                    self!.page += 1
+                    self!.fetchingMore = true
+                }
+                
+                
                 self?.notify(.showLaunchList(true))
                 self?.notify(.setLoading(false))
             case .failure(let error):
@@ -85,19 +106,23 @@ extension LaunchListViewModel: UITableViewDataSource {
             let item = allLaunchs![indexPath.row]
             cell.lblFlightHeader?.text = item.missionName
             cell.lblFlightDate?.text = item.launchDateFormatted
+            
+            let url: URL?
             if item.links.mission_patch_small != nil {
-                let url = URL(string: item.links.mission_patch_small!)
-                cell.imgFlight!.kf.setImage(with: url)
+                url = URL(string: item.links.mission_patch_small!)
             }
             else {
-                cell.imgFlight!.image = nil
+                url = URL(string: "https://pic.onlinewebfonts.com/svg/img_546302.png")
             }
+            cell.imgFlight!.kf.indicatorType = .activity
+            cell.imgFlight!.kf.setImage(with: url)
             cell.lblFlightDetail?.text = item.details ?? ""
             
             return cell
         }
         return UITableViewCell()
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

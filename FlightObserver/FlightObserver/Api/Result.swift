@@ -8,6 +8,6 @@
 import Foundation
 
 public enum Result<Value> {
-    case success(Value)
+    case success(Value,_ count: Int = 0)
     case failure(Error)
 }

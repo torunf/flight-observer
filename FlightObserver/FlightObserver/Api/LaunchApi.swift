@@ -10,7 +10,7 @@ import Alamofire
 
 public protocol LaunchApiServiceProtocol {
     func fetchUpcomingLaunchs(completion: @escaping (Result<[LaunchDetail]>) -> Void)
-    func fetchAllLaunchs(completion: @escaping (Result<[LaunchDetail]>) -> Void)
+    func fetchAllLaunchs(page: Int, perPage: Int, completion: @escaping (Result<[LaunchDetail]>) -> Void)
 }
 
 class LaunchApiService : LaunchApiServiceProtocol {
@@ -33,6 +33,8 @@ class LaunchApiService : LaunchApiServiceProtocol {
         var request = URLRequest(url: URL(string:urlString)!)
         request.httpMethod = HTTPMethod.get.rawValue
         AF.request(request).responseData { response in
+
+            
             switch response.result {
             case .success(let data):
                 let decoder = JSONDecoder()
@@ -49,8 +51,32 @@ class LaunchApiService : LaunchApiServiceProtocol {
         }
     }
     
-    func fetchAllLaunchs( completion: @escaping (Result<[LaunchDetail]>) -> Void) {
-        let urlString = baseUrlString + "launches"
+    func fetchAllLaunchs(page: Int, perPage: Int, completion: @escaping (Result<[LaunchDetail]>) -> Void) {
+        let urlString = baseUrlString + "launches?limit=\(perPage)&offset=\((page-1)*perPage)"
+        var request = URLRequest(url: URL(string:urlString)!)
+        request.httpMethod = HTTPMethod.get.rawValue
+        AF.request(request).responseData { response in
+            let count = response.response?.headers["Spacex-Api-Count"]
+            let tCount: Int = count == nil ? 0 : Int(count!)!
+            
+            switch response.result {
+            case .success(let data):
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .secondsSince1970
+                do {
+                    let response = try decoder.decode([LaunchDetail].self, from: data)
+                    completion(.success(response, tCount))
+                } catch {
+                    completion(.failure(Error.serializationError(internal: error)))
+                }
+            case .failure(let error):
+                completion(.failure(Error.networkError(internal: error)))
+            }
+        }
+    }
+    
+    func fetchLaunch(flightNumber: Int, completion: @escaping (Result<LaunchDetail>) -> Void) {
+        let urlString = baseUrlString + "launches/" + String(flightNumber)
         var request = URLRequest(url: URL(string:urlString)!)
         request.httpMethod = HTTPMethod.get.rawValue
         AF.request(request).responseData { response in
@@ -59,7 +85,7 @@ class LaunchApiService : LaunchApiServiceProtocol {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .secondsSince1970
                 do {
-                    let response = try decoder.decode([LaunchDetail].self, from: data)
+                    let response = try decoder.decode(LaunchDetail.self, from: data)
                     completion(.success(response))
                 } catch {
                     completion(.failure(Error.serializationError(internal: error)))
@@ -69,6 +95,4 @@ class LaunchApiService : LaunchApiServiceProtocol {
             }
         }
     }
-    
-    
 }

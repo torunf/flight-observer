@@ -86,5 +86,18 @@ extension LaunchListViewController: UITableViewDelegate {
         let viewModel = LaunchDetailViewModel(launchDetail: item)
         self.viewModel!.delegate!.navigate(to: .detail(viewModel))        
     }
-
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > (contentHeight - scrollView.frame.height){
+            if self.viewModel!.fetchingMore {
+                print("API Calling")
+                self.viewModel.getList()
+                
+            }
+        }
+    }
 }
