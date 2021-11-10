@@ -13,7 +13,6 @@ protocol AllLaunchsOperationType {
     var page: Int { get set }
     var perPage: Int { get set }
     var request: Request { get }
-
     init(page: Int, perPage: Int)
     func execute(in dispatcher: Dispatcher, completion: @escaping (FlightResult<[LaunchDetail], Error>) -> Void)
 }

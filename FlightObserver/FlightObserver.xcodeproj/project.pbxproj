@@ -180,7 +180,6 @@
 			children = (
 				67B6BE8E273C5CC1004C5EA6 /* Network */,
 				67B6BE6027397437004C5EA6 /* Support */,
-				67B6BE5C273973C5004C5EA6 /* Api */,
 				67B6BE5D273973CC004C5EA6 /* App */,
 				67B6BE5E273973D9004C5EA6 /* Scenes */,
 				67B6BE5F273973F9004C5EA6 /* Resources */,
@@ -203,13 +202,6 @@
 				67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */,
 			);
 			path = FlightObserverUITests;
-			sourceTree = "<group>";
-		};
-		67B6BE5C273973C5004C5EA6 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Api;
 			sourceTree = "<group>";
 		};
 		67B6BE5D273973CC004C5EA6 /* App */ = {
