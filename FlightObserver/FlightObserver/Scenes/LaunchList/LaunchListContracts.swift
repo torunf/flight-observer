@@ -14,7 +14,7 @@ protocol LaunchListViewModelProtocol {
     func load()
     func getSlider()
     func getList()
-    func getLaunch(withIndex ix: Int ) -> LaunchDetail
+    func getDetail(withIndex ix: Int)
 }
 
 enum LaunchListViewModelOutput: Equatable {

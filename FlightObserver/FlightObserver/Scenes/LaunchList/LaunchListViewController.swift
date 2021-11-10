@@ -81,10 +81,9 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
 }
 
 extension LaunchListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = self.viewModel.getLaunch(withIndex: indexPath.row)
-        let viewModel = LaunchDetailViewModel(launchDetail: item)
-        self.viewModel!.delegate!.navigate(to: .detail(viewModel))        
+        self.viewModel.getDetail(withIndex: indexPath.row)
     }
     
     

@@ -22,7 +22,7 @@
 		67B6BE6E27397F0D004C5EA6 /* LaunchListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6D27397F0D004C5EA6 /* LaunchListContracts.swift */; };
 		67B6BE7027397F79004C5EA6 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6F27397F79004C5EA6 /* LaunchListViewModel.swift */; };
 		67B6BE73273980EB004C5EA6 /* LaunchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE72273980EB004C5EA6 /* LaunchDetail.swift */; };
-		67B6BE752739828C004C5EA6 /* LaunchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE742739828C004C5EA6 /* LaunchApi.swift */; };
+		67B6BE752739828C004C5EA6 /* LaunchApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE742739828C004C5EA6 /* LaunchApiService.swift */; };
 		67B6BE7727398301004C5EA6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7627398301004C5EA6 /* Result.swift */; };
 		67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */; };
 		67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */; };
@@ -32,6 +32,17 @@
 		67B6BE85273AF380004C5EA6 /* LaunchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE84273AF380004C5EA6 /* LaunchDetailBuilder.swift */; };
 		67B6BE87273AF39C004C5EA6 /* LaunchDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE86273AF39C004C5EA6 /* LaunchDetailContracts.swift */; };
 		67B6BE89273AF3AC004C5EA6 /* LaunchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE88273AF3AC004C5EA6 /* LaunchDetailViewModel.swift */; };
+		67B6BE8B273C541A004C5EA6 /* LaunchApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE8A273C541A004C5EA6 /* LaunchApiServiceProtocol.swift */; };
+		67B6BE9A273C5CC1004C5EA6 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE8F273C5CC1004C5EA6 /* Dispatcher.swift */; };
+		67B6BE9B273C5CC1004C5EA6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE90273C5CC1004C5EA6 /* Environment.swift */; };
+		67B6BE9C273C5CC1004C5EA6 /* AllLaunchsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE92273C5CC1004C5EA6 /* AllLaunchsOperation.swift */; };
+		67B6BE9D273C5CC1004C5EA6 /* UpcomingLaunchsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE93273C5CC1004C5EA6 /* UpcomingLaunchsOperation.swift */; };
+		67B6BE9E273C5CC1004C5EA6 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE94273C5CC1004C5EA6 /* Operation.swift */; };
+		67B6BE9F273C5CC1004C5EA6 /* LaunchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE96273C5CC1004C5EA6 /* LaunchRequests.swift */; };
+		67B6BEA0273C5CC1004C5EA6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE97273C5CC1004C5EA6 /* Request.swift */; };
+		67B6BEA1273C5CC1004C5EA6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE98273C5CC1004C5EA6 /* Response.swift */; };
+		67B6BEA2273C5CC1004C5EA6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */; };
+		67B6BEA4273C7FF7004C5EA6 /* LaunchsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA3273C7FF7004C5EA6 /* LaunchsOperation.swift */; };
 		B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */; };
 		DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,7 +87,7 @@
 		67B6BE6D27397F0D004C5EA6 /* LaunchListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListContracts.swift; sourceTree = "<group>"; };
 		67B6BE6F27397F79004C5EA6 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
 		67B6BE72273980EB004C5EA6 /* LaunchDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetail.swift; sourceTree = "<group>"; };
-		67B6BE742739828C004C5EA6 /* LaunchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchApi.swift; sourceTree = "<group>"; };
+		67B6BE742739828C004C5EA6 /* LaunchApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchApiService.swift; sourceTree = "<group>"; };
 		67B6BE7627398301004C5EA6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		67B6BE7827399283004C5EA6 /* LaunchDetailLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailLinks.swift; sourceTree = "<group>"; };
 		67B6BE7B2739AAA3004C5EA6 /* FlightDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailRow.swift; sourceTree = "<group>"; };
@@ -86,6 +97,17 @@
 		67B6BE84273AF380004C5EA6 /* LaunchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailBuilder.swift; sourceTree = "<group>"; };
 		67B6BE86273AF39C004C5EA6 /* LaunchDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailContracts.swift; sourceTree = "<group>"; };
 		67B6BE88273AF3AC004C5EA6 /* LaunchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewModel.swift; sourceTree = "<group>"; };
+		67B6BE8A273C541A004C5EA6 /* LaunchApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchApiServiceProtocol.swift; sourceTree = "<group>"; };
+		67B6BE8F273C5CC1004C5EA6 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		67B6BE90273C5CC1004C5EA6 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		67B6BE92273C5CC1004C5EA6 /* AllLaunchsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLaunchsOperation.swift; sourceTree = "<group>"; };
+		67B6BE93273C5CC1004C5EA6 /* UpcomingLaunchsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchsOperation.swift; sourceTree = "<group>"; };
+		67B6BE94273C5CC1004C5EA6 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		67B6BE96273C5CC1004C5EA6 /* LaunchRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRequests.swift; sourceTree = "<group>"; };
+		67B6BE97273C5CC1004C5EA6 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		67B6BE98273C5CC1004C5EA6 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		67B6BEA3273C7FF7004C5EA6 /* LaunchsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchsOperation.swift; sourceTree = "<group>"; };
 		9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver_FlightObserverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +178,7 @@
 		67B6BE2B27397092004C5EA6 /* FlightObserver */ = {
 			isa = PBXGroup;
 			children = (
+				67B6BE8E273C5CC1004C5EA6 /* Network */,
 				67B6BE6027397437004C5EA6 /* Support */,
 				67B6BE5C273973C5004C5EA6 /* Api */,
 				67B6BE5D273973CC004C5EA6 /* App */,
@@ -185,9 +208,6 @@
 		67B6BE5C273973C5004C5EA6 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				67B6BE71273980A8004C5EA6 /* Models */,
-				67B6BE742739828C004C5EA6 /* LaunchApi.swift */,
-				67B6BE7627398301004C5EA6 /* Result.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -277,6 +297,51 @@
 				67B6BE7D2739C4F9004C5EA6 /* KingfisherSource.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		67B6BE8E273C5CC1004C5EA6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BEA5273C8208004C5EA6 /* Services */,
+				67B6BE71273980A8004C5EA6 /* Models */,
+				67B6BE91273C5CC1004C5EA6 /* Operations */,
+				67B6BE95273C5CC1004C5EA6 /* Requests */,
+				67B6BE8F273C5CC1004C5EA6 /* Dispatcher.swift */,
+				67B6BE98273C5CC1004C5EA6 /* Response.swift */,
+				67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */,
+				67B6BE90273C5CC1004C5EA6 /* Environment.swift */,
+				67B6BE7627398301004C5EA6 /* Result.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		67B6BE91273C5CC1004C5EA6 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE92273C5CC1004C5EA6 /* AllLaunchsOperation.swift */,
+				67B6BEA3273C7FF7004C5EA6 /* LaunchsOperation.swift */,
+				67B6BE93273C5CC1004C5EA6 /* UpcomingLaunchsOperation.swift */,
+				67B6BE94273C5CC1004C5EA6 /* Operation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		67B6BE95273C5CC1004C5EA6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE96273C5CC1004C5EA6 /* LaunchRequests.swift */,
+				67B6BE97273C5CC1004C5EA6 /* Request.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		67B6BEA5273C8208004C5EA6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BE8A273C541A004C5EA6 /* LaunchApiServiceProtocol.swift */,
+				67B6BE742739828C004C5EA6 /* LaunchApiService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		759661529CC22FB94E48F739 /* Pods */ = {
@@ -533,22 +598,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				67B6BE2D27397092004C5EA6 /* AppDelegate.swift in Sources */,
+				67B6BEA0273C5CC1004C5EA6 /* Request.swift in Sources */,
 				67B6BE64273974A9004C5EA6 /* AppContainer.swift in Sources */,
+				67B6BEA2273C5CC1004C5EA6 /* NetworkDispatcher.swift in Sources */,
+				67B6BE9D273C5CC1004C5EA6 /* UpcomingLaunchsOperation.swift in Sources */,
 				67B6BE7027397F79004C5EA6 /* LaunchListViewModel.swift in Sources */,
 				67B6BE73273980EB004C5EA6 /* LaunchDetail.swift in Sources */,
 				67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */,
 				67B6BE87273AF39C004C5EA6 /* LaunchDetailContracts.swift in Sources */,
-				67B6BE752739828C004C5EA6 /* LaunchApi.swift in Sources */,
+				67B6BE752739828C004C5EA6 /* LaunchApiService.swift in Sources */,
 				67B6BE85273AF380004C5EA6 /* LaunchDetailBuilder.swift in Sources */,
 				67B6BE89273AF3AC004C5EA6 /* LaunchDetailViewModel.swift in Sources */,
+				67B6BE9E273C5CC1004C5EA6 /* Operation.swift in Sources */,
+				67B6BEA1273C5CC1004C5EA6 /* Response.swift in Sources */,
+				67B6BE9B273C5CC1004C5EA6 /* Environment.swift in Sources */,
 				67B6BE6227397498004C5EA6 /* AppRouter.swift in Sources */,
+				67B6BE9F273C5CC1004C5EA6 /* LaunchRequests.swift in Sources */,
 				67B6BE7727398301004C5EA6 /* Result.swift in Sources */,
 				67B6BE7E2739C4F9004C5EA6 /* KingfisherSource.swift in Sources */,
 				67B6BE6A27397E30004C5EA6 /* LaunchListViewController.swift in Sources */,
+				67B6BE9A273C5CC1004C5EA6 /* Dispatcher.swift in Sources */,
 				67B6BE83273AF372004C5EA6 /* LaunchDetailViewController.swift in Sources */,
+				67B6BEA4273C7FF7004C5EA6 /* LaunchsOperation.swift in Sources */,
 				67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */,
 				67B6BE6C27397EC1004C5EA6 /* LaunchListBuilder.swift in Sources */,
+				67B6BE9C273C5CC1004C5EA6 /* AllLaunchsOperation.swift in Sources */,
 				67B6BE6E27397F0D004C5EA6 /* LaunchListContracts.swift in Sources */,
+				67B6BE8B273C541A004C5EA6 /* LaunchApiServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

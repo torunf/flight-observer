@@ -40,6 +40,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     }
     
     func getSlider() {
+        
         service.fetchUpcomingLaunchs() { [weak self](result) in
             guard self != nil else { return }
             switch result {
@@ -55,21 +56,16 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     
     func getList() {
         self.fetchingMore = false
-
         service.fetchAllLaunchs(page: self.page, perPage: self.perPage) { [weak self](result) in
             guard self != nil else { return }
             switch result {
             case .success(let response, let count):
                 self?.allLaunchs?.append(contentsOf: response)
                 self?.launchsTotalCount = count
-                
-                
                 if self!.page < self!.totalPage {
                     self!.page += 1
                     self!.fetchingMore = true
                 }
-                
-                
                 self?.notify(.showLaunchList(true))
                 self?.notify(.setLoading(false))
             case .failure(let error):
@@ -77,10 +73,19 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
             }
         }
     }
-    
-    func getLaunch(withIndex ix: Int ) -> LaunchDetail {
-        let item = allLaunchs![ix]
-        return item
+
+    func getDetail(withIndex ix: Int) {
+        let item = self.allLaunchs![ix]
+        service.fetchLaunch(flightNumber: item.flightNumber) { [weak self](result) in
+            guard self != nil else { return }
+            switch result {
+            case .success(let response, _):
+                let viewModel = LaunchDetailViewModel(launchDetail: response)
+                self!.delegate?.navigate(to: .detail(viewModel))
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func notify(_ output: LaunchListViewModelOutput) {
@@ -129,16 +134,3 @@ extension LaunchListViewModel: UITableViewDataSource {
     }
     
 }
-
-
-//extension LaunchListViewModel: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let item = allLaunchs![indexPath.row]
-//
-//        let viewModel = LaunchDetailViewModel(launchDetail: item)
-//        self.delegate?.navigate(to: .detail(viewModel))
-//    }
-//
-//}
-

@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-public struct LaunchDetailLinks: Decodable, Equatable {
+public struct LaunchDetailLinks: Codable, Equatable {
     
     public enum CodingKeys: String, CodingKey {
         case mission_patch
