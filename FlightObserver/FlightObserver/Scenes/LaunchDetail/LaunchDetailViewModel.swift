@@ -17,7 +17,7 @@ final class LaunchDetailViewModel: LaunchDetailViewModelProtocol {
     }
     
     func load() {
-        delegate?.handleViewModelOutput(.updateTitle("Launch DETAILS"))
+        delegate?.handleViewModelOutput(.updateTitle("\(self.presentation.missionName.uppercased()) DETAIL"))
         delegate?.showDetail(presentation)
     }
     

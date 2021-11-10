@@ -26,7 +26,12 @@ final class AllLaunchsOperation: Operation, AllLaunchsOperationType {
     // MARK: Request parameters
     var page: Int
     var perPage: Int
-
+    
+    init() {
+        self.page = 0
+        self.perPage = 0
+    }
+    
     init(page: Int, perPage: Int) {
         self.page = page
         self.perPage = perPage

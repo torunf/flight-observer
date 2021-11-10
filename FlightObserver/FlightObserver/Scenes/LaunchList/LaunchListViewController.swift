@@ -25,6 +25,7 @@ final class LaunchListViewController: UIViewController {
         
         tableView?.dataSource = viewModel as? UITableViewDataSource
         tableView?.estimatedRowHeight = 100
+
     }
     
     public func showSpinner(isLoading: Bool) {
@@ -49,7 +50,6 @@ final class LaunchListViewController: UIViewController {
         }
     }
 }
-
 
 extension LaunchListViewController: LaunchListViewModelDelegate {
     
@@ -85,7 +85,6 @@ extension LaunchListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.viewModel.getDetail(withIndex: indexPath.row)
     }
-    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y

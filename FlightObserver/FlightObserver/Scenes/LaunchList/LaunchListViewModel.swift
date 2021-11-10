@@ -33,7 +33,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     }
     
     func load() {
-        notify(.updateTitle("LAUNCHES"))
+        notify(.updateTitle("SpaceX LAUNCHES"))
         notify(.setLoading(true))
         self.getSlider()
         self.getList()

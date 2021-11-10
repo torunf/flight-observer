@@ -39,6 +39,7 @@ extension Operation {
 
                 if let json = xresponse.data {
                     let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .secondsSince1970
                     do {
                         let response = try decoder.decode(T.self, from: json)
                         completion(.success(response, dataCount: xresponse.dataCount))

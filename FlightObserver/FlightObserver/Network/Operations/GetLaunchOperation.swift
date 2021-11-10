@@ -8,20 +8,24 @@
 import Foundation
 import AVFoundation
 
-protocol LaunchOperationType {
+protocol GetLaunchOperationType {
     var flightNumber: Int { get set }
     var request: Request { get }
     init(flightNumber: Int)
     func execute(in dispatcher: Dispatcher, completion: @escaping (FlightResult<LaunchDetail, Error>) -> Void)
 }
 
-final class LaunchOperation: Operation, LaunchOperationType {
+final class GetLaunchOperation: Operation, GetLaunchOperationType {
     
     typealias D = Dispatcher
     typealias R = LaunchDetail
     
     // MARK: Request parameters
     var flightNumber: Int
+    
+    init() {
+        self.flightNumber = 0
+    }
     
     init(flightNumber: Int) {
         self.flightNumber = flightNumber

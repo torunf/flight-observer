@@ -42,7 +42,7 @@
 		67B6BEA0273C5CC1004C5EA6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE97273C5CC1004C5EA6 /* Request.swift */; };
 		67B6BEA1273C5CC1004C5EA6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE98273C5CC1004C5EA6 /* Response.swift */; };
 		67B6BEA2273C5CC1004C5EA6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */; };
-		67B6BEA4273C7FF7004C5EA6 /* LaunchsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA3273C7FF7004C5EA6 /* LaunchsOperation.swift */; };
+		67B6BEA4273C7FF7004C5EA6 /* GetLaunchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */; };
 		B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */; };
 		DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */; };
 /* End PBXBuildFile section */
@@ -107,7 +107,7 @@
 		67B6BE97273C5CC1004C5EA6 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		67B6BE98273C5CC1004C5EA6 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
-		67B6BEA3273C7FF7004C5EA6 /* LaunchsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchsOperation.swift; sourceTree = "<group>"; };
+		67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLaunchOperation.swift; sourceTree = "<group>"; };
 		9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver_FlightObserverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				67B6BE92273C5CC1004C5EA6 /* AllLaunchsOperation.swift */,
-				67B6BEA3273C7FF7004C5EA6 /* LaunchsOperation.swift */,
+				67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */,
 				67B6BE93273C5CC1004C5EA6 /* UpcomingLaunchsOperation.swift */,
 				67B6BE94273C5CC1004C5EA6 /* Operation.swift */,
 			);
@@ -619,7 +619,7 @@
 				67B6BE6A27397E30004C5EA6 /* LaunchListViewController.swift in Sources */,
 				67B6BE9A273C5CC1004C5EA6 /* Dispatcher.swift in Sources */,
 				67B6BE83273AF372004C5EA6 /* LaunchDetailViewController.swift in Sources */,
-				67B6BEA4273C7FF7004C5EA6 /* LaunchsOperation.swift in Sources */,
+				67B6BEA4273C7FF7004C5EA6 /* GetLaunchOperation.swift in Sources */,
 				67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */,
 				67B6BE6C27397EC1004C5EA6 /* LaunchListBuilder.swift in Sources */,
 				67B6BE9C273C5CC1004C5EA6 /* AllLaunchsOperation.swift in Sources */,
@@ -805,7 +805,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -836,7 +836,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

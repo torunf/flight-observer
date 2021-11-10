@@ -43,18 +43,7 @@ public class Response {
         }
 
         let jsonx: JSON? = nil
-//
-//        switch dataResponse.result {
-//        case .success(let value):
-//            guard let json = value as? JSON else {
-//                self.error = NetworkError.noData
-//                return
-//            }
-//            jsonx = json
-//        case .failure(_):
-//            self.error = NetworkError.forbidden
-//            return
-//        }
+        
         let count = dataResponse.response?.headers["Spacex-Api-Count"]
         let tCount: Int = count == nil ? 0 : Int(count!)!
         self.dataCount = tCount
