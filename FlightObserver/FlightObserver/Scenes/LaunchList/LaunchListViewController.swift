@@ -20,10 +20,8 @@ final class LaunchListViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.load()
-        
         tableView?.dataSource = viewModel as? UITableViewDataSource
         tableView?.estimatedRowHeight = 100
-
     }
     
     public func showSpinner(isLoading: Bool, operation: Operations) {
@@ -49,16 +47,11 @@ final class LaunchListViewController: UIViewController {
             }
         }
     }
-    
-    public func removeSpinner() {
-
-    }
 }
 
 extension LaunchListViewController: LaunchListViewModelDelegate {
     
     func handleViewModelOutput(_ output: LaunchListViewModelOutput) {
-        
         switch output {
         case .updateTitle(let title):
             self.title = title
@@ -96,7 +89,6 @@ extension LaunchListViewController: UITableViewDelegate {
         
         if offsetY > (contentHeight - scrollView.frame.height){
             if self.viewModel!.fetchingMore {
-                print("API Calling")
                 self.viewModel.getList()
                 
             }

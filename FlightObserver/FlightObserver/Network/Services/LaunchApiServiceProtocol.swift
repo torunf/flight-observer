@@ -9,9 +9,7 @@ import Foundation
 import Alamofire
 
 public protocol LaunchApiServiceProtocol {
-    
     func fetchUpcomingLaunchs(completion: @escaping (FlightResult<[LaunchDetail], Error>) -> Void)
     func fetchAllLaunchs(page: Int, perPage: Int, completion: @escaping (FlightResult<[LaunchDetail], Error>) -> Void)
-    func fetchLaunch(flightNumber: Int, completion: @escaping (FlightResult<LaunchDetail, Error>) -> Void)
-    
+    func fetchLaunch(flightNumber: Int, completion: @escaping (FlightResult<LaunchDetail, Error>) -> Void)    
 }

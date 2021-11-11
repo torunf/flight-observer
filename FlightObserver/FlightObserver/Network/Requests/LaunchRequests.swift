@@ -10,7 +10,6 @@ import Foundation
 
 public enum LaunchRequests: Request {
     
-//page: Int, perPage: Int
     case all(page: Int, perPage: Int)
     case upcoming(page: Int, perPage: Int)
     case get(flightNumber: Int)

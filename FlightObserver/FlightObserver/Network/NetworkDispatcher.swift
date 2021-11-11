@@ -38,24 +38,17 @@ public class NetworkDispatcher: Dispatcher {
     
     required public init(environment: Environment) {
         self.environment = environment
-        
         let configuration = URLSessionConfiguration.default
-        
-        // Set timeout interval.
-//        configuration.timeoutIntervalForRequest = 30.0
-//        configuration.timeoutIntervalForResource = 30.0
-//
-//        // Set cookie policies.
-//        configuration.httpCookieAcceptPolicy = HTTPCookie.AcceptPolicy.always
-//        configuration.httpCookieStorage = HTTPCookieStorage.shared
-//        configuration.httpShouldSetCookies = false
-        
+        configuration.timeoutIntervalForRequest = 30.0
+        configuration.timeoutIntervalForResource = 30.0
+        configuration.httpCookieAcceptPolicy = HTTPCookie.AcceptPolicy.always
+        configuration.httpCookieStorage = HTTPCookieStorage.shared
+        configuration.httpShouldSetCookies = false
         self.sessionManager = Alamofire.Session(configuration: configuration)
     }
     
     public func execute(request: Request, completion: @escaping (_ response: Response) -> Void) throws {
         let req = try self.prepareURLRequest(for: request)
-        print(req)
         self.sessionManager.request(req)
             .validate()
             .responseJSON { response in
@@ -64,22 +57,18 @@ public class NetworkDispatcher: Dispatcher {
     }
     
     private func prepareURLRequest(for request: Request) throws -> URLRequest {
-        // Compose the url
         let fullUrl = "\(environment.host)/\(request.path)"
         var urlRequest = URLRequest(url: URL(string: fullUrl)!)
         
-        // Working with parameters
         if let parameters = request.parameters {
             switch parameters {
             case .body(let params):
-                // Parameters are part of the body
                 if let params = params as? [String: String] {
                     urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .init(rawValue: 0))
                 } else {
                     throw NetworkError.badInput
                 }
             case .url(let params):
-                // Parameters are part of the url
                 let queryParams = self.getQueryParams(params: params)
                 guard var components = URLComponents(string: fullUrl) else {
                     throw NetworkError.badInput
@@ -89,13 +78,9 @@ public class NetworkDispatcher: Dispatcher {
             }
         }
         
-        // Add headers from environment and request
         environment.headers.forEach { urlRequest.addValue($0.value as! String, forHTTPHeaderField: $0.key) }
         request.headers?.forEach { urlRequest.addValue($0.value as! String, forHTTPHeaderField: $0.key) }
-        
-        // Setup HTTP method
         urlRequest.httpMethod = request.method.rawValue
-        
         return urlRequest
     }
 

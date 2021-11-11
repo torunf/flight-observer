@@ -9,7 +9,8 @@ import Foundation
 import Alamofire
 
 class LaunchApiService : LaunchApiServiceProtocol {
-
+    
+    //MARK: - properties
     private(set) var dispatcher: Dispatcher
     private(set) var allLaunchsOperation: AllLaunchsOperationType
     private(set) var upcomingLaunchsOperation: UpcomingLaunchsOperationType
@@ -20,14 +21,16 @@ class LaunchApiService : LaunchApiServiceProtocol {
         case serializationError(internal: Swift.Error)
         case networkError(internal: Swift.Error)
     }
-
+    
+    //MARK: - initializer
     public init() {
         self.dispatcher = NetworkDispatcher(environment: Utils.Env.SpaceX)
         self.allLaunchsOperation = AllLaunchsOperation()
         self.upcomingLaunchsOperation = UpcomingLaunchsOperation()
         self.getLaunchOperation = GetLaunchOperation()
     }
-
+    
+    //MARK: - methods
     func fetchUpcomingLaunchs(completion: @escaping (FlightResult<[LaunchDetail], Error>) -> Void) {
         upcomingLaunchsOperation.execute(in: dispatcher) { result in
             switch result {

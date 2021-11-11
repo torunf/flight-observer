@@ -11,9 +11,6 @@
 		67B6BE2D27397092004C5EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE2C27397092004C5EA6 /* AppDelegate.swift */; };
 		67B6BE3627397094004C5EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE3527397094004C5EA6 /* Assets.xcassets */; };
 		67B6BE3927397094004C5EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE3727397094004C5EA6 /* LaunchScreen.storyboard */; };
-		67B6BE4427397094004C5EA6 /* FlightObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE4327397094004C5EA6 /* FlightObserverTests.swift */; };
-		67B6BE4E27397094004C5EA6 /* FlightObserverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE4D27397094004C5EA6 /* FlightObserverUITests.swift */; };
-		67B6BE5027397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */; };
 		67B6BE6227397498004C5EA6 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE6127397498004C5EA6 /* AppRouter.swift */; };
 		67B6BE64273974A9004C5EA6 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE63273974A9004C5EA6 /* AppContainer.swift */; };
 		67B6BE6827397E17004C5EA6 /* LaunchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B6BE6727397E17004C5EA6 /* LaunchList.storyboard */; };
@@ -44,26 +41,7 @@
 		67B6BEA2273C5CC1004C5EA6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */; };
 		67B6BEA4273C7FF7004C5EA6 /* GetLaunchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */; };
 		67B6BEA8273D3238004C5EA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA7273D3238004C5EA6 /* UIView+.swift */; };
-		B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */; };
-		DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		67B6BE4027397094004C5EA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67B6BE2127397092004C5EA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67B6BE2827397092004C5EA6;
-			remoteInfo = FlightObserver;
-		};
-		67B6BE4A27397094004C5EA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67B6BE2127397092004C5EA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67B6BE2827397092004C5EA6;
-			remoteInfo = FlightObserver;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22476715D53622257F95ED73 /* Pods-FlightObserver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver.release.xcconfig"; path = "Target Support Files/Pods-FlightObserver/Pods-FlightObserver.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,11 +53,6 @@
 		67B6BE3527397094004C5EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67B6BE3827397094004C5EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67B6BE3A27397094004C5EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67B6BE3F27397094004C5EA6 /* FlightObserverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightObserverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67B6BE4327397094004C5EA6 /* FlightObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightObserverTests.swift; sourceTree = "<group>"; };
-		67B6BE4927397094004C5EA6 /* FlightObserverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightObserverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67B6BE4D27397094004C5EA6 /* FlightObserverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightObserverUITests.swift; sourceTree = "<group>"; };
-		67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightObserverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		67B6BE6127397498004C5EA6 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		67B6BE63273974A9004C5EA6 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		67B6BE6727397E17004C5EA6 /* LaunchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchList.storyboard; sourceTree = "<group>"; };
@@ -126,22 +99,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67B6BE3C27397094004C5EA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67B6BE4627397094004C5EA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				67B6BE2B27397092004C5EA6 /* FlightObserver */,
-				67B6BE4227397094004C5EA6 /* FlightObserverTests */,
-				67B6BE4C27397094004C5EA6 /* FlightObserverUITests */,
 				67B6BE2A27397092004C5EA6 /* Products */,
 				759661529CC22FB94E48F739 /* Pods */,
 				3691B9DABF10F2535E11DA21 /* Frameworks */,
@@ -171,8 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				67B6BE2927397092004C5EA6 /* FlightObserver.app */,
-				67B6BE3F27397094004C5EA6 /* FlightObserverTests.xctest */,
-				67B6BE4927397094004C5EA6 /* FlightObserverUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,23 +140,6 @@
 				67B6BE5F273973F9004C5EA6 /* Resources */,
 			);
 			path = FlightObserver;
-			sourceTree = "<group>";
-		};
-		67B6BE4227397094004C5EA6 /* FlightObserverTests */ = {
-			isa = PBXGroup;
-			children = (
-				67B6BE4327397094004C5EA6 /* FlightObserverTests.swift */,
-			);
-			path = FlightObserverTests;
-			sourceTree = "<group>";
-		};
-		67B6BE4C27397094004C5EA6 /* FlightObserverUITests */ = {
-			isa = PBXGroup;
-			children = (
-				67B6BE4D27397094004C5EA6 /* FlightObserverUITests.swift */,
-				67B6BE4F27397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift */,
-			);
-			path = FlightObserverUITests;
 			sourceTree = "<group>";
 		};
 		67B6BE5D273973CC004C5EA6 /* App */ = {
@@ -382,45 +318,6 @@
 			productReference = 67B6BE2927397092004C5EA6 /* FlightObserver.app */;
 			productType = "com.apple.product-type.application";
 		};
-		67B6BE3E27397094004C5EA6 /* FlightObserverTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67B6BE5627397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverTests" */;
-			buildPhases = (
-				0A232DEBDA591D234213DD30 /* [CP] Check Pods Manifest.lock */,
-				67B6BE3B27397094004C5EA6 /* Sources */,
-				67B6BE3C27397094004C5EA6 /* Frameworks */,
-				67B6BE3D27397094004C5EA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				67B6BE4127397094004C5EA6 /* PBXTargetDependency */,
-			);
-			name = FlightObserverTests;
-			productName = FlightObserverTests;
-			productReference = 67B6BE3F27397094004C5EA6 /* FlightObserverTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		67B6BE4827397094004C5EA6 /* FlightObserverUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67B6BE5927397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverUITests" */;
-			buildPhases = (
-				F116419C0D3DC9CA06A44443 /* [CP] Check Pods Manifest.lock */,
-				67B6BE4527397094004C5EA6 /* Sources */,
-				67B6BE4627397094004C5EA6 /* Frameworks */,
-				67B6BE4727397094004C5EA6 /* Resources */,
-				D91783E7C5E3ECFA3D1B2FFC /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				67B6BE4B27397094004C5EA6 /* PBXTargetDependency */,
-			);
-			name = FlightObserverUITests;
-			productName = FlightObserverUITests;
-			productReference = 67B6BE4927397094004C5EA6 /* FlightObserverUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -433,14 +330,6 @@
 				TargetAttributes = {
 					67B6BE2827397092004C5EA6 = {
 						CreatedOnToolsVersion = 13.1;
-					};
-					67B6BE3E27397094004C5EA6 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 67B6BE2827397092004C5EA6;
-					};
-					67B6BE4827397094004C5EA6 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 67B6BE2827397092004C5EA6;
 					};
 				};
 			};
@@ -458,8 +347,6 @@
 			projectRoot = "";
 			targets = (
 				67B6BE2827397092004C5EA6 /* FlightObserver */,
-				67B6BE3E27397094004C5EA6 /* FlightObserverTests */,
-				67B6BE4827397094004C5EA6 /* FlightObserverUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -476,45 +363,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67B6BE3D27397094004C5EA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67B6BE4727397094004C5EA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A232DEBDA591D234213DD30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlightObserverTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		53CF86E91269689D067EE91F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,45 +403,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlightObserver/Pods-FlightObserver-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D91783E7C5E3ECFA3D1B2FFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F116419C0D3DC9CA06A44443 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlightObserver-FlightObserverUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -632,37 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67B6BE3B27397094004C5EA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67B6BE4427397094004C5EA6 /* FlightObserverTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67B6BE4527397094004C5EA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67B6BE5027397094004C5EA6 /* FlightObserverUITestsLaunchTests.swift in Sources */,
-				67B6BE4E27397094004C5EA6 /* FlightObserverUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		67B6BE4127397094004C5EA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 67B6BE2827397092004C5EA6 /* FlightObserver */;
-			targetProxy = 67B6BE4027397094004C5EA6 /* PBXContainerItemProxy */;
-		};
-		67B6BE4B27397094004C5EA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 67B6BE2827397092004C5EA6 /* FlightObserver */;
-			targetProxy = 67B6BE4A27397094004C5EA6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		67B6BE3727397094004C5EA6 /* LaunchScreen.storyboard */ = {
@@ -854,106 +636,6 @@
 			};
 			name = Release;
 		};
-		67B6BE5727397094004C5EA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CPYF7YJ28K;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightObserver.app/FlightObserver";
-			};
-			name = Debug;
-		};
-		67B6BE5827397094004C5EA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CPYF7YJ28K;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightObserver.app/FlightObserver";
-			};
-			name = Release;
-		};
-		67B6BE5A27397094004C5EA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2A180A9C4162CD8AC417322 /* Pods-FlightObserver-FlightObserverUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CPYF7YJ28K;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlightObserver;
-			};
-			name = Debug;
-		};
-		67B6BE5B27397094004C5EA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DEEEE32B8E184A5EE5811E3 /* Pods-FlightObserver-FlightObserverUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CPYF7YJ28K;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftrn.flightobserver.FlightObserverUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlightObserver;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -971,24 +653,6 @@
 			buildConfigurations = (
 				67B6BE5427397094004C5EA6 /* Debug */,
 				67B6BE5527397094004C5EA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		67B6BE5627397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67B6BE5727397094004C5EA6 /* Debug */,
-				67B6BE5827397094004C5EA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		67B6BE5927397094004C5EA6 /* Build configuration list for PBXNativeTarget "FlightObserverUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67B6BE5A27397094004C5EA6 /* Debug */,
-				67B6BE5B27397094004C5EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

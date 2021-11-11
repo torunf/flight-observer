@@ -5,7 +5,6 @@
 //  Created by Furkan Torun on 8.11.2021.
 //
 
-
 import Foundation
 import UIKit
 import Kingfisher
@@ -129,7 +128,6 @@ extension LaunchListViewModel: UITableViewDataSource {
         return UITableViewCell()
     }
 
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }

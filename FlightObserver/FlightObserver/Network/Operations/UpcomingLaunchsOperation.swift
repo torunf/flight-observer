@@ -17,8 +17,6 @@ final class UpcomingLaunchsOperation: Operation, UpcomingLaunchsOperationType {
 
     typealias D = Dispatcher
     typealias R = [LaunchDetail]
-
-    // MARK: Request parameters
     
     init() {
     }

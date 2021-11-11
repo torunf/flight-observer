@@ -2,22 +2,10 @@
 # platform :ios, '9.0'
 
 target 'FlightObserver' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for FlightObserver
 
   pod 'Kingfisher', '~> 7.0'
   pod 'Alamofire', '~> 5.4'
   pod 'ImageSlideshow', '~> 1.9.0'
-
-  target 'FlightObserverTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'FlightObserverUITests' do
-    # Pods for testing
-  end
 
 end
