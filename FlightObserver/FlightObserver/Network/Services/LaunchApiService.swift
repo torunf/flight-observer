@@ -40,9 +40,9 @@ class LaunchApiService : LaunchApiServiceProtocol {
     }
 
     func fetchAllLaunchs(page: Int, perPage: Int, completion: @escaping (FlightResult<[LaunchDetail], Error>) -> Void) {
-        allLaunchsOperation.page = page
-        allLaunchsOperation.perPage = perPage
-        allLaunchsOperation.execute(in: dispatcher) { result in
+        self.allLaunchsOperation.page = page
+        self.allLaunchsOperation.perPage = perPage
+        self.allLaunchsOperation.execute(in: self.dispatcher) { result in
             switch result {
             case .success(let response, let dataCount):
                 completion(.success(response, dataCount: dataCount))

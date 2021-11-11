@@ -17,13 +17,17 @@ protocol LaunchListViewModelProtocol {
     func getDetail(withIndex ix: Int)
 }
 
+public enum Operations: Equatable {
+    case slider
+    case list
+}
+
 enum LaunchListViewModelOutput: Equatable {
     static func == (lhs: LaunchListViewModelOutput, rhs: LaunchListViewModelOutput) -> Bool {
         return true
     }
-    
     case updateTitle(String)
-    case setLoading(Bool)
+    case setLoading(Bool, _ operation: Operations)
     case showSliders([InputSource])
     case showLaunchList(Bool)
 }

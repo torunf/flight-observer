@@ -11,11 +11,9 @@ import Kingfisher
 import ImageSlideshow
 
 final class LaunchListViewController: UIViewController {
-    var viewModel: LaunchListViewModelProtocol!
-    var loading : UIView?
-
-    @IBOutlet weak var tableView: UITableView?
     
+    var viewModel: LaunchListViewModelProtocol!
+    @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var slideshow: ImageSlideshow!
     
     override func viewDidLoad() {
@@ -28,26 +26,32 @@ final class LaunchListViewController: UIViewController {
 
     }
     
-    public func showSpinner(isLoading: Bool) {
-        if(!isLoading) {
-            removeSpinner()
-            return
+    public func showSpinner(isLoading: Bool, operation: Operations) {
+        
+        if isLoading {
+            DispatchQueue.main.async {
+                switch operation {
+                case .slider:
+                    self.slideshow.activityStartAnimating(activityColor: UIColor.gray, backgroundColor: UIColor.white.withAlphaComponent(0.1))
+                case .list:
+                    self.view.activityStartAnimating(activityColor: UIColor.gray, backgroundColor: UIColor.white.withAlphaComponent(0.1))
+                }
+            }
         }
-        let ai = UIActivityIndicatorView.init(style: .large)
-        ai.startAnimating()
-        ai.center = view.center
-             
-        DispatchQueue.main.async {
-            self.view.addSubview(ai)
+        else {
+            DispatchQueue.main.async {
+                switch operation {
+                case .slider:
+                    self.slideshow.activityStopAnimating()
+                case .list:
+                    self.view.activityStopAnimating()
+                }
+            }
         }
-        loading = ai
     }
     
     public func removeSpinner() {
-        DispatchQueue.main.async {
-            self.loading?.removeFromSuperview()
-            self.loading = nil
-        }
+
     }
 }
 
@@ -59,8 +63,8 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
         case .updateTitle(let title):
             self.title = title
             break
-        case .setLoading(let isLoading):
-            showSpinner(isLoading: isLoading)
+        case .setLoading(let isLoading, let operation):
+            showSpinner(isLoading: isLoading, operation: operation)
             break
         case .showSliders(let slides):
             slideshow.setImageInputs(slides)

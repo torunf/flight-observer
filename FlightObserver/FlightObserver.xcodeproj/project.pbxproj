@@ -43,6 +43,7 @@
 		67B6BEA1273C5CC1004C5EA6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE98273C5CC1004C5EA6 /* Response.swift */; };
 		67B6BEA2273C5CC1004C5EA6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */; };
 		67B6BEA4273C7FF7004C5EA6 /* GetLaunchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */; };
+		67B6BEA8273D3238004C5EA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA7273D3238004C5EA6 /* UIView+.swift */; };
 		B21671C119285E000E15F364 /* Pods_FlightObserver_FlightObserverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */; };
 		DAF12013C1C2619B6C138CCB /* Pods_FlightObserverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		67B6BE98273C5CC1004C5EA6 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLaunchOperation.swift; sourceTree = "<group>"; };
+		67B6BEA7273D3238004C5EA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver_FlightObserverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		67B6BE6027397437004C5EA6 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				67B6BEA6273D3222004C5EA6 /* Extensions */,
 				67B6BE7F2739C56E004C5EA6 /* Helpers */,
 				67B6BE7A2739AA79004C5EA6 /* CustomRows */,
 				67B6BE3A27397094004C5EA6 /* Info.plist */,
@@ -334,6 +337,14 @@
 				67B6BE742739828C004C5EA6 /* LaunchApiService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		67B6BEA6273D3222004C5EA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67B6BEA7273D3238004C5EA6 /* UIView+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		759661529CC22FB94E48F739 /* Pods */ = {
@@ -613,6 +624,7 @@
 				67B6BE83273AF372004C5EA6 /* LaunchDetailViewController.swift in Sources */,
 				67B6BEA4273C7FF7004C5EA6 /* GetLaunchOperation.swift in Sources */,
 				67B6BE7C2739AAA3004C5EA6 /* FlightDetailRow.swift in Sources */,
+				67B6BEA8273D3238004C5EA6 /* UIView+.swift in Sources */,
 				67B6BE6C27397EC1004C5EA6 /* LaunchListBuilder.swift in Sources */,
 				67B6BE9C273C5CC1004C5EA6 /* AllLaunchsOperation.swift in Sources */,
 				67B6BE6E27397F0D004C5EA6 /* LaunchListContracts.swift in Sources */,

@@ -65,7 +65,10 @@ final class LaunchDetailViewController: UIViewController {
     
     public func showSpinner(isLoading: Bool) {
         if(!isLoading) {
-            removeSpinner()
+            DispatchQueue.main.async {
+                self.loading?.removeFromSuperview()
+                self.loading = nil
+            }
             return
         }
         let ai = UIActivityIndicatorView.init(style: .large)
@@ -76,13 +79,6 @@ final class LaunchDetailViewController: UIViewController {
             self.view.addSubview(ai)
         }
         loading = ai
-    }
-    
-    public func removeSpinner() {
-        DispatchQueue.main.async {
-            self.loading?.removeFromSuperview()
-            self.loading = nil
-        }
     }
 }
 

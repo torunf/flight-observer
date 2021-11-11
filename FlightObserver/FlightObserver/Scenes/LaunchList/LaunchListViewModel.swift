@@ -34,13 +34,12 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     
     func load() {
         notify(.updateTitle("SpaceX LAUNCHES"))
-        notify(.setLoading(true))
         self.getSlider()
         self.getList()
     }
     
     func getSlider() {
-        
+        notify(.setLoading(true, .slider))
         service.fetchUpcomingLaunchs() { [weak self](result) in
             guard self != nil else { return }
             switch result {
@@ -48,6 +47,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
                 self?.upcomingLaunchs = response
                 let x:[InputSource] = response.map { KingfisherSource(urlString: $0.links.mission_patch ?? "https://pic.onlinewebfonts.com/svg/img_546302.png" )! }
                 self?.notify(.showSliders(x))
+                self?.notify(.setLoading(false, .slider))
             case .failure(let error):
                 print(error)
             }
@@ -56,6 +56,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     
     func getList() {
         self.fetchingMore = false
+        notify(.setLoading(true, .list))
         service.fetchAllLaunchs(page: self.page, perPage: self.perPage) { [weak self](result) in
             guard self != nil else { return }
             switch result {
@@ -67,7 +68,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
                     self!.fetchingMore = true
                 }
                 self?.notify(.showLaunchList(true))
-                self?.notify(.setLoading(false))
+                self?.notify(.setLoading(false, .list))
             case .failure(let error):
                 print(error)
             }
