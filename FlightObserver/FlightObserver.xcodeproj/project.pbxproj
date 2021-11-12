@@ -41,13 +41,13 @@
 		67B6BEA2273C5CC1004C5EA6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */; };
 		67B6BEA4273C7FF7004C5EA6 /* GetLaunchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */; };
 		67B6BEA8273D3238004C5EA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA7273D3238004C5EA6 /* UIView+.swift */; };
+		67B6BEAA273E6D5A004C5EA6 /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6BEA9273E6D5A004C5EA6 /* InternetConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22476715D53622257F95ED73 /* Pods-FlightObserver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver.release.xcconfig"; path = "Target Support Files/Pods-FlightObserver/Pods-FlightObserver.release.xcconfig"; sourceTree = "<group>"; };
 		3DEEEE32B8E184A5EE5811E3 /* Pods-FlightObserver-FlightObserverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver-FlightObserverUITests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests.release.xcconfig"; sourceTree = "<group>"; };
 		432F068C8EF990EF570F612D /* Pods-FlightObserver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserver/Pods-FlightObserver.debug.xcconfig"; sourceTree = "<group>"; };
-		5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B6BE2927397092004C5EA6 /* FlightObserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightObserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B6BE2C27397092004C5EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67B6BE3527397094004C5EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		67B6BE99273C5CC1004C5EA6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		67B6BEA3273C7FF7004C5EA6 /* GetLaunchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLaunchOperation.swift; sourceTree = "<group>"; };
 		67B6BEA7273D3238004C5EA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightObserver_FlightObserverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B6BEA9273E6D5A004C5EA6 /* InternetConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionManager.swift; sourceTree = "<group>"; };
 		AD7A9B84D737C361AE5011F1 /* Pods-FlightObserverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.release.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADEFA52907B0BB89CAB9FA5A /* Pods-FlightObserverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserverTests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserverTests/Pods-FlightObserverTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2A180A9C4162CD8AC417322 /* Pods-FlightObserver-FlightObserverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightObserver-FlightObserverUITests.debug.xcconfig"; path = "Target Support Files/Pods-FlightObserver-FlightObserverUITests/Pods-FlightObserver-FlightObserverUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				B2C8C79F37728CE2DDBD0DCF /* Pods_FlightObserver.framework */,
-				9AE29D5019B1D35A30F5E1CE /* Pods_FlightObserver_FlightObserverUITests.framework */,
-				5A70DC243CF284C48205611E /* Pods_FlightObserverTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				67B6BE7D2739C4F9004C5EA6 /* KingfisherSource.swift */,
+				67B6BEA9273E6D5A004C5EA6 /* InternetConnectionManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -420,6 +419,7 @@
 				67B6BE7027397F79004C5EA6 /* LaunchListViewModel.swift in Sources */,
 				67B6BE73273980EB004C5EA6 /* LaunchDetail.swift in Sources */,
 				67B6BE7927399283004C5EA6 /* LaunchDetailLinks.swift in Sources */,
+				67B6BEAA273E6D5A004C5EA6 /* InternetConnectionManager.swift in Sources */,
 				67B6BE87273AF39C004C5EA6 /* LaunchDetailContracts.swift in Sources */,
 				67B6BE752739828C004C5EA6 /* LaunchApiService.swift in Sources */,
 				67B6BE85273AF380004C5EA6 /* LaunchDetailBuilder.swift in Sources */,

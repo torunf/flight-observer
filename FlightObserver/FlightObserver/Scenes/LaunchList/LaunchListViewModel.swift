@@ -34,7 +34,6 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
     func load() {
         notify(.updateTitle("SpaceX LAUNCHES"))
         self.getSlider()
-        self.getList()
     }
     
     func getSlider() {
@@ -47,6 +46,7 @@ final class LaunchListViewModel: NSObject, LaunchListViewModelProtocol {
                 let x:[InputSource] = response.map { KingfisherSource(urlString: $0.links.mission_patch ?? "https://pic.onlinewebfonts.com/svg/img_546302.png" )! }
                 self?.notify(.showSliders(x))
                 self?.notify(.setLoading(false, .slider))
+                self?.getList()
             case .failure(let error):
                 print(error)
             }

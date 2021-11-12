@@ -48,6 +48,23 @@ public class NetworkDispatcher: Dispatcher {
     }
     
     public func execute(request: Request, completion: @escaping (_ response: Response) -> Void) throws {
+        
+        if InternetConnectionManager.isConnectedToNetwork() {
+        }
+        else {
+            let alertController = UIAlertController(title: "Internet Connection Error", message: "The Internet connection appears to be offline.", preferredStyle: .actionSheet)
+            let okAction = UIAlertAction(title: "Try Again", style: .default ) {
+                UIAlertAction in
+                
+                DispatchQueue.main.async {
+                    try? self.execute(request: request, completion: completion)
+                }
+            }
+            alertController.addAction(okAction)
+            app.router.window.rootViewController?.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
         let req = try self.prepareURLRequest(for: request)
         self.sessionManager.request(req)
             .validate()
